@@ -167,45 +167,52 @@
         </div>
 
         <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <!-- Modified Layout: Flex col on mobile (for reordering), Grid on desktop -->
+            <div class="flex flex-col gap-8 lg:grid lg:grid-cols-2 lg:gap-20 items-center">
                 
-                <!-- Left: Copy -->
-                <div class="text-center lg:text-left space-y-8">
+                <!-- Left: Copy Wrapper (Uses 'contents' on mobile to unwrap children for reordering) -->
+                <div class="contents lg:flex lg:flex-col lg:space-y-8">
                     
-                    <!-- Trust Pills -->
-                    <div class="flex flex-wrap justify-center lg:justify-start gap-3">
-                        <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] font-bold uppercase tracking-wider text-brand-gold flex items-center gap-1.5">
-                            <span class="material-symbols-outlined text-sm">science</span> EU Lab Tested
-                        </span>
-                        <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] font-bold uppercase tracking-wider text-white flex items-center gap-1.5">
-                            <span class="material-symbols-outlined text-sm">local_shipping</span> <span data-translate="fast_shipping">24h Shipping</span>
-                        </span>
+                    <!-- GROUP 1: Title & Pills (Mobile Order 1) -->
+                    <div class="order-1 w-full text-center lg:text-left space-y-6">
+                        <!-- Trust Pills -->
+                        <div class="flex flex-wrap justify-center lg:justify-start gap-3">
+                            <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] font-bold uppercase tracking-wider text-brand-gold flex items-center gap-1.5">
+                                <span class="material-symbols-outlined text-sm">science</span> EU Lab Tested
+                            </span>
+                            <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] font-bold uppercase tracking-wider text-white flex items-center gap-1.5">
+                                <span class="material-symbols-outlined text-sm">local_shipping</span> <span data-translate="fast_shipping">24h Shipping</span>
+                            </span>
+                        </div>
+
+                        <!-- Headline Impact -->
+                        <h1 class="text-4xl md:text-6xl font-black text-white leading-[1.1] tracking-tight">
+                            <span data-translate="hero_title_1">Restore Your</span> <br>
+                            <span data-translate="hero_title_2" class="bg-gradient-to-r from-brand-gold to-yellow-200 bg-clip-text text-transparent">Male Balance</span>
+                        </h1>
                     </div>
 
-                    <!-- Headline Impact -->
-                    <h1 class="text-4xl md:text-6xl font-black text-white leading-[1.1] tracking-tight">
-                        <span data-translate="hero_title_1">Restore Your</span> <br>
-                        <span data-translate="hero_title_2" class="bg-gradient-to-r from-brand-gold to-yellow-200 bg-clip-text text-transparent">Male Balance</span>
-                    </h1>
+                    <!-- GROUP 2: Description & Trustpilot (Mobile Order 3) -->
+                    <div class="order-3 w-full text-center lg:text-left space-y-6">
+                        <p data-translate="hero_desc" class="text-lg text-slate-400 font-body leading-relaxed max-w-xl mx-auto lg:mx-0">
+                            The scientifically based formula for energy, metabolism, and vitality. Developed for the demanding modern man.
+                        </p>
 
-                    <p data-translate="hero_desc" class="text-lg text-slate-400 font-body leading-relaxed max-w-xl mx-auto lg:mx-0">
-                        The scientifically based formula for energy, metabolism, and vitality. Developed for the demanding modern man.
-                    </p>
-
-                    <!-- Trustpilot Widget Elite -->
-                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 p-4 rounded-xl bg-white/5 border border-white/5 w-fit mx-auto lg:mx-0">
-                        <div class="flex items-center gap-1 bg-trust-green px-2 py-1 rounded">
-                            <span class="material-symbols-outlined text-white text-sm fill-1">star</span>
-                            <span class="text-white font-bold text-sm">Trustpilot</span>
+                        <!-- Trustpilot Widget Elite -->
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 p-4 rounded-xl bg-white/5 border border-white/5 w-fit mx-auto lg:mx-0">
+                            <div class="flex items-center gap-1 bg-trust-green px-2 py-1 rounded">
+                                <span class="material-symbols-outlined text-white text-sm fill-1">star</span>
+                                <span class="text-white font-bold text-sm">Trustpilot</span>
+                            </div>
+                            <div class="flex text-trust-green gap-0.5 text-lg">
+                                <span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span>
+                            </div>
+                            <span data-translate="trust_score" class="text-sm font-semibold text-white">4.9/5 Excellent</span>
                         </div>
-                        <div class="flex text-trust-green gap-0.5 text-lg">
-                            <span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span>
-                        </div>
-                        <span data-translate="trust_score" class="text-sm font-semibold text-white">4.9/5 Excellent</span>
                     </div>
 
-                    <!-- CTA Primary -->
-                    <div class="pt-4">
+                    <!-- GROUP 3: CTA Primary (Mobile Order 4) -->
+                    <div class="order-4 w-full text-center lg:text-left pt-2 lg:pt-0">
                         <a href="#select-country" class="shimmer-btn inline-flex items-center gap-4 bg-brand-gold hover:bg-brand-gold-dark text-black text-lg font-bold px-8 py-5 rounded-full shadow-glow transition-all transform hover:-translate-y-1 w-full sm:w-auto justify-center">
                             <span data-translate="cta_check">Check Stock</span>
                             <span class="material-symbols-outlined font-black">arrow_downward</span>
@@ -217,8 +224,8 @@
 
                 </div>
 
-                <!-- Right: Product 3D -->
-                <div class="relative group perspective-1000">
+                <!-- Right: Product 3D (Mobile Order 2) -->
+                <div class="relative group perspective-1000 order-2 lg:order-last w-full">
                     <div class="absolute inset-0 bg-gradient-to-b from-brand-gold/20 to-transparent rounded-full blur-3xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
                     
                     <!-- Product Container -->
