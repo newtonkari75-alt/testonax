@@ -629,11 +629,12 @@
                 <!-- Payment Icons -->
                 <div>
                     <h4 data-translate="payment_title" class="text-white font-bold uppercase tracking-widest mb-6">Payment Security</h4>
-                    <div class="flex gap-2 opacity-70 mb-6">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" class="h-8 bg-white rounded px-2">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" class="h-8 bg-white rounded px-2">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" class="h-8 bg-white rounded px-2">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/American_Express_logo_%282018%29.svg" class="h-8 bg-white rounded px-2">
+                    <!-- Adicionado flex-wrap para evitar quebra em telas pequenas e classes de ajuste de imagem -->
+                    <div class="flex flex-wrap gap-2 opacity-70 mb-6">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" class="h-8 w-auto bg-white rounded px-2 object-contain shrink-0" alt="PayPal">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" class="h-8 w-auto bg-white rounded px-2 object-contain shrink-0" alt="Mastercard">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" class="h-8 w-auto bg-white rounded px-2 object-contain shrink-0" alt="Visa">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/American_Express_logo_%282018%29.svg" class="h-8 w-auto bg-white rounded px-2 object-contain shrink-0" alt="Amex">
                     </div>
                     <div data-translate="ssl_desc" class="text-slate-600 text-[10px] leading-tight">
                         Your data is transmitted via 256-bit SSL encryption. We do not store credit card data. Certified payment processing.
